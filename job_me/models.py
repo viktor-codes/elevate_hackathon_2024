@@ -19,7 +19,7 @@ class Technology(models.Model):
         Category, related_name="technologies", on_delete=models.CASCADE
     )
     image = models.ImageField(upload_to="category_images/", blank=True)
-    image_name = models.CharField(max_length=100)
+    image_name = models.CharField(max_length=100, default="no_image.png")
 
     class Meta:
         verbose_name = "Technology"

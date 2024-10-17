@@ -1,12 +1,7 @@
-{% extends "base.html" %} 
-{% load static %} 
-
-{% block extra_css %}
-<link rel="stylesheet" href="{% static 'css/home.css' %}">
-<link rel="stylesheet" href="{% static 'css/main.css' %}">
-{% endblock%}
-
-{% block content %}
+{% extends "base.html" %} {% load static %} {% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}" />
+<link rel="stylesheet" href="{% static 'css/main.css' %}" />
+{% endblock%} {% block content %}
 
 <section id="hero" class="h-100">
 	<div class="container col-xxl-8 px-4 py-5">
@@ -23,7 +18,9 @@
 				</p>
 
 				<div class="d-flex align-items-center gap-2 mt-3">
-					<a href="{% url 'job_me:categories' %}" type="button" class="try-btn">Try for free</a>
+					<a href="{% url 'job_me:categories' %}" type="button" class="try-btn"
+						>Try for free</a
+					>
 				</div>
 			</div>
 			<div
@@ -41,7 +38,6 @@
 	</div>
 </section>
 
-
 <section id="tech-container">
 	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
 		<path
@@ -51,30 +47,34 @@
 		></path>
 	</svg>
 	<div class="container tech-container mt-0">
-        <div class="row">
-            <div class="col-12">
-                <h1 class="section-title">Explore our tech stacks on offer!</h1>
-                <div
-                    class="row row-cols-2 row-cols-sm-3 row-cols-md-3 g-3 text-center"
-                >
-                {% for technology in technologies %}
-            <div class="col">
-                <a href="{% url 'job_me:technology_detail' technology.id %}" class="d-block text-decoration-none">
-                    <div class="btn btn-outline-primary w-100 text-center">
-                        <img src="{{ technology.image.url }}" alt="{{ technology.name }}" class="img-fluid" style="max-height: 40px; margin-right: 10px;"/>
-                        {{ technology.name }}
-                    </div>
-                </a>
-            </div>
-        {% endfor %}
-        
-                    
-                </div>
-            </div>
-            </div>
-        </div>
-
+		<div class="row">
+			<div class="col-12">
+				<h1 class="section-title">Explore our tech stacks on offer!</h1>
+				<div class="row row-cols-2 row-cols-sm-3 row-cols-md-3 g-3 text-center">
+					{% for technology in technologies %}
+					<div class="col">
+						<a
+							href="{% url 'job_me:technology_detail' technology.id %}"
+							class="d-block text-decoration-none"
+						>
+							<div class="btn btn-outline-primary w-100 text-center">
+								<img
+									src="{{ technology.image.url }}"
+									alt="{{ technology.name }}"
+									class="img-fluid"
+									style="max-height: 40px; margin-right: 10px"
+								/>
+								{{ technology.name }}
+							</div>
+						</a>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
 </section>
+
 <section id="top-questions">
 	<!-- View Top Questions Section -->
 	<div class="questions-carousel default-container">
@@ -88,7 +88,7 @@
 						Refresh your knowledge by checking out top questions
 					</h2>
 				</div>
-				<div class="swiper-buttons ">
+				<div class="swiper-buttons">
 					<button class="swiper-button-prev swiper-button">
 						<i class="fa-solid fa-chevron-left"></i>
 					</button>
@@ -173,7 +173,9 @@
 							<div class="top-questions-card-content">
 								<button>
 									<h1>Comp Sci</h1>
-									<p>Beginner to gradate level computer science questions...</p>
+									<p>
+										Beginner to graduate level computer science questions...
+									</p>
 									<i class="fa-solid fa-computer fa-xl"></i>
 								</button>
 							</div>
@@ -188,19 +190,21 @@
 					</div>
 				</div>
 			</div>
-            <!-- Floating Images -->
-            <div class="figure left">
-                <img src="{% static 'images/pyramid.png' %}" alt="Left Image" />
-            </div>
-            <div class="figure right">
-                <img src="{% static 'images/triangle.png' %}" alt="Right Image" />
-            </div>
+			<!-- Floating Images -->
+			<div class="figure left">
+				<img src="{% static 'images/pyramid.png' %}" alt="Left Image" />
+			</div>
+			<div class="figure right">
+				<img src="{% static 'images/triangle.png' %}" alt="Right Image" />
+			</div>
 		</div>
 	</div>
 </section>
-    
 
-
-</main>
-<script src="static/js/script.js"></script>
+<div class="cta-signup default-container">
+	<div class="cta-signup-header">
+		<h1>Are you ready to chart a new course?</h1>
+	</div>
+</div>
+<script src="{% static 'js/script.js' %}"></script>
 {% endblock %}

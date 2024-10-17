@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
 /* 
 .dark-mode-toggle {
@@ -56,7 +56,7 @@
 
 	/* fonts */
 
-	--main-font: Lato;
+	--main-font: Inter;
 	--heading-font-weight: 700;
 	--subheading-font-weight: 400;
 	--paragraph-font-weight: 300;
@@ -125,22 +125,10 @@
 }
 
 .tech-container {
-	margin-top: 2rem;
-	background-image: linear-gradient(
-		to bottom,
-		var(--main-green-dark),
-		var(--main-green-light)
-	);
+	background-image: linear-gradient(to bottom, #38a3a5, #57cc99);
 	color: var(--main-dark);
-	padding: 2rem;
-	height: auto;
 	border-radius: 12px;
-}
-
-.tech-container h1 {
-	margin-left: 1rem;
-	color: white;
-	font-weight: 900;
+	padding: 4rem;
 }
 
 .tech-container i {
@@ -165,7 +153,10 @@
 	min-width: 12.5%;
 	height: 2.5rem;
 	text-align: left;
-	padding: 2rem;
+	padding-left: 10px;
+	padding-right: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 	font-weight: 600;
 }
 
@@ -201,6 +192,7 @@
 	height: 100%;
 	display: flex;
 	position: relative;
+	justify-content: center;
 	overflow: hidden;
 }
 
@@ -214,7 +206,7 @@
 .top-questions-card-content {
 	position: relative;
 	border-radius: 20px;
-	height: 300px;
+	height: 400px;
 	margin-right: 3em;
 }
 
@@ -230,7 +222,7 @@
 
 .top-questions-card-content i {
 	font-size: 10em;
-	color: #57cc99;
+	color: var(--main-green-dark);
 	opacity: 0.2;
 	position: relative;
 	top: 10%;
@@ -369,9 +361,12 @@
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	width: 90%;
-	left: 5%;
-	background-image: linear-gradient(to top, #38a3a5, #57cc99);
+
+	background: linear-gradient(
+		to bottom,
+		var(--main-green-dark),
+		var(--main-green-light)
+	);
 	height: 200px;
 	border-radius: 20px;
 }
@@ -387,11 +382,12 @@
 	width: 250px;
 	height: auto;
 	padding: 5px;
-	border: 1px solid black;
+	border: none;
 	border-radius: 20px;
-	background-color: #edba02;
-	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+	background-color: var(--main-purple-light);
 	color: white;
+	opacity: 0.8;
 	font-size: 2rem;
 }
 
@@ -413,8 +409,7 @@
 	background-color: #0056b3;
 }
 
-.dark-mode,
-.dark-mode-toggle {
+.dark-mode .dark-mode-toggle {
 	background-color: #4e4e4e;
 	color: white;
 }
@@ -435,78 +430,72 @@
 		height: 200px;
 		width: 200px;
 	}
-
 	.top-questions-card-content button h1 {
 		top: 5%;
 		font-size: 2rem;
 	}
-
 	.top-questions-card-content button p {
 		font-size: 1rem;
 		top: 30%;
 	}
-
 	.top-questions-cards {
 		width: 100%;
 		overflow: visible;
 		justify-content: center;
 		left: 5%;
 	}
-
 	.cta-home-item h1 {
 		font-size: 1.5rem;
 		height: 80px;
 		line-height: 3rem;
 	}
-
 	.cta-signup-header h1 {
 		font-size: 1.5rem;
 	}
-
 	.cta-signup-button {
 		width: 200px;
 		font-size: 0.8rem;
 		margin-bottom: 0.5rem;
 	}
 }
-
 @media screen and (max-width: 480px) {
 	.top-subheader-container {
 		display: flex;
 		flex-direction: column;
 	}
-
 	.top-header h1 {
 		text-align: center;
+		font-size: 2rem;
 	}
-
+	.swiper-button-prev {
+		justify-content: left;
+	}
 	.top-subheader-p {
 		width: 100%;
 		text-align: center;
-		left: 5%;
 	}
-
 	.top-questions-card-content button {
 		height: 200px;
 		width: 200px;
+		left: 5%;
 	}
-
+	.top-questions-card-content {
+		margin-right: 0px;
+	}
 	.slide-section {
 		top: 10%;
 		flex-direction: column;
+		left: 5%;
 		height: 220px;
 	}
-
 	.top-questions-card-content button h1 {
 		top: 5%;
 		font-size: 2rem;
 	}
-
 	.top-questions-card-content button p {
 		font-size: 1rem;
 		top: 30%;
 	}
-
 	.top-questions-cards {
 		width: 100%;
 		overflow: visible;
@@ -514,17 +503,14 @@
 		margin-top: 14rem;
 		margin-bottom: 16rem;
 	}
-
 	.cta-home-item h1 {
 		font-size: 1.5rem;
 		height: 80px;
 		line-height: 3rem;
 	}
-
 	.cta-signup-header h1 {
 		font-size: 1.5rem;
 	}
-
 	.cta-signup-button {
 		width: 200px;
 		font-size: 0.8rem;

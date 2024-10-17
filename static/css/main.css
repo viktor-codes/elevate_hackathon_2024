@@ -104,7 +104,7 @@
 
 .left {
 	width: 200px;
-	left: -150px;
+	left: -200px;
 	top: -20%;
 	transform: translateY(-50%);
 	animation: float 3s infinite;
@@ -113,7 +113,7 @@
 .right {
 	width: 100px;
 	right: -75px;
-	bottom: -20%;
+	bottom: 0;
 	transform: translateY(-50%);
 	animation: float 3s infinite;
 }
@@ -155,6 +155,12 @@
 	z-index: 10;
 	border: 2px solid darkslategrey;
 	box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 768px) {
+	.section-title {
+		font-size: 32px; /* Adjust this value as needed */
+		padding: 15px; /* Optionally adjust padding */
+	}
 }
 
 .try-btn {

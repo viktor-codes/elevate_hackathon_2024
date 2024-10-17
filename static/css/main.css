@@ -85,6 +85,51 @@
 	animation: moveBackground 30s linear infinite;
 }
 
+#top-questions {
+	height: 100vh;
+	padding: 2rem;
+	margin: 3rem;
+}
+
+.figure {
+	position: absolute;
+	z-index: 10;
+}
+
+.figure img {
+	width: 100%; /* Make image responsive */
+	height: auto; /* Maintain aspect ratio */
+	transition: transform 0.5s ease;
+}
+
+.left {
+	width: 200px;
+	left: -150px;
+	top: -20%;
+	transform: translateY(-50%);
+	animation: float 3s infinite;
+}
+
+.right {
+	width: 100px;
+	right: -75px;
+	bottom: -20%;
+	transform: translateY(-50%);
+	animation: float 3s infinite;
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-10px); /* Move up */
+	}
+	100% {
+		transform: translatey(0px); /* Back to original */
+	}
+}
+
 @keyframes moveBackground {
 	0% {
 		background-position: bottom center;

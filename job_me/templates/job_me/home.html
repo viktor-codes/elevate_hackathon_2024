@@ -51,35 +51,40 @@
 		></path>
 	</svg>
 	<div class="container tech-container mt-0">
-		<h1 class="section-title">Explore our tech stacks on offer!</h1>
-		<div
-			class="row row-cols-2 row-cols-sm-3 row-cols-md-3 g-3 text-center"
-		>
-        {% for technology in technologies %}
-    <div class="col">
-        <a href="{% url 'job_me:technology_detail' technology.id %}" class="d-block text-decoration-none">
-            <div class="btn btn-outline-primary w-100 text-center">
-                <img src="{{ technology.image.url }}" alt="{{ technology.name }}" class="img-fluid" style="max-height: 40px; margin-right: 10px;"/>
-                {{ technology.name }}
+        <div class="row">
+            <div class="col-12">
+                <h1 class="section-title">Explore our tech stacks on offer!</h1>
+                <div
+                    class="row row-cols-2 row-cols-sm-3 row-cols-md-3 g-3 text-center"
+                >
+                {% for technology in technologies %}
+            <div class="col">
+                <a href="{% url 'job_me:technology_detail' technology.id %}" class="d-block text-decoration-none">
+                    <div class="btn btn-outline-primary w-100 text-center">
+                        <img src="{{ technology.image.url }}" alt="{{ technology.name }}" class="img-fluid" style="max-height: 40px; margin-right: 10px;"/>
+                        {{ technology.name }}
+                    </div>
+                </a>
             </div>
-        </a>
-    </div>
-{% endfor %}
+        {% endfor %}
+        
+                    
+                </div>
+            </div>
+            </div>
+        </div>
 
-			
-		</div>
-	</div>
 </section>
 <section id="top-questions">
 	<!-- View Top Questions Section -->
 	<div class="questions-carousel default-container">
 		<div class="swiper-wrapper content">
-			<div class="top-header">
-				<h1>Review Top Questions!</h1>
+			<div class="top-header text-center">
+				<h1 class="lead">Review Top Questions!</h1>
 			</div>
 			<div class="top-subheader-container">
-				<div class="top-subheader" >
-					<h2 class="top-subheader-p">
+				<div class="top-subheader">
+					<h2 class="top-subheader-p text-center">
 						Refresh your knowledge by checking out top questions
 					</h2>
 				</div>
@@ -183,16 +188,18 @@
 					</div>
 				</div>
 			</div>
+            <!-- Floating Images -->
+            <div class="figure left">
+                <img src="{% static 'images/pyramid.png' %}" alt="Left Image" />
+            </div>
+            <div class="figure right">
+                <img src="{% static 'images/triangle.png' %}" alt="Right Image" />
+            </div>
 		</div>
 	</div>
 </section>
     
-    <div class="cta-signup default-container">
-        <div class="cta-signup-header">
-            <h1>Are you ready to chart a new course?</h1>
-        </div>
-        <button class="cta-signup-button">Join us!</button>
-    </div>
+
 
 </main>
 <script src="static/js/script.js"></script>

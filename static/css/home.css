@@ -48,7 +48,7 @@
 	/* default light green, when we hover over buttons becomes darker */
 	--main-green-light: #40d668;
 	--main-green-dark: #2b8c46;
-    --main-purple-light: #9747ff;
+	--main-purple-light: #9747ff;
 
 	/* box colors for light and dark mode */
 	--box-light-background-light: #f1f1f1;
@@ -81,7 +81,6 @@
 	width: 80%;
 }
 
-
 .hero-section {
 	display: flex;
 	color: var(--main-dark);
@@ -91,16 +90,16 @@
 }
 
 .hero-section::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    opacity: .4;
-    background-image: url(https://t3.ftcdn.net/jpg/07/38/89/48/360_F_738894857_62jRatktPCpiBnPiBHrBLgy5ecPD1gTR.jpg);
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: multiply;
-    border-radius: 20px;
+	content: '';
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+	opacity: 0.4;
+	background-image: url(https://t3.ftcdn.net/jpg/07/38/89/48/360_F_738894857_62jRatktPCpiBnPiBHrBLgy5ecPD1gTR.jpg);
+	background-size: cover;
+	background-position: center;
+	background-blend-mode: multiply;
+	border-radius: 20px;
 }
 
 .hero-section h1 {
@@ -109,7 +108,7 @@
 	text-transform: uppercase;
 	font-size: 6rem;
 	font-weight: 1000;
-    opacity: 0.9;
+	opacity: 0.9;
 }
 
 .hero-section p {
@@ -361,72 +360,102 @@
 	color: var(--main-lightest);
 }
 
-/* cta sign up */ 
+/* cta sign up */
 
 .cta-signup {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
 
-    background: linear-gradient(to bottom, var(--main-green-dark), var(--main-green-light));
-    height: 200px;
-    border-radius: 20px;
+	background: linear-gradient(
+		to bottom,
+		var(--main-green-dark),
+		var(--main-green-light)
+	);
+	height: 200px;
+	border-radius: 20px;
 }
 
 .cta-signup-header h1 {
-    color: white;
-    font-size: 3rem;
-    font-weight: 1000;
+	color: white;
+	font-size: 3rem;
+	font-weight: 1000;
 }
 
 .cta-signup button {
-    margin-top: 1rem;
-    width: 250px;
-    height: auto;
-    padding: 5px;
-    border: none;
-    border-radius: 20px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-    background-color: var(--main-purple-light);
-    color:white;
-    opacity: 0.7;
-    font-size: 2rem;
+	margin-top: 1rem;
+	width: 250px;
+	height: auto;
+	padding: 5px;
+	border: none;
+	border-radius: 20px;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+	background-color: var(--main-purple-light);
+	color: white;
+	opacity: 0.7;
+	font-size: 2rem;
 }
 
 /* Dark Mode Toggle Button */
 .dark-mode-toggle {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	padding: 10px 20px;
+	background-color: #007bff;
+	color: white;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+	transition: background-color 0.3s;
 }
 
-.dark-mode-toggle:hover {
-    background-color: #0056b3;
+body.dark-mode {
+	background-color: #121212; /* Dark background */
+	color: #ffffff; /* Light text */
 }
 
-.dark-mode .dark-mode-toggle {
-    background-color: #4e4e4e;
-    color: white;
+.navbar.dark-mode {
+	background-color: #1e1e1e; /* Dark navbar background */
 }
+
+.btn-outline-dark.dark-mode {
+	border-color: #ffffff; /* Change button border color */
+	color: #ffffff; /* Button text color */
+}
+
+.btn-outline-danger.dark-mode {
+	border-color: #ff4d4d; /* Change danger button border color */
+	color: #ff4d4d; /* Button text color */
+}
+
+.dark-mode a {
+	color: #ffffff; /* Links color */
+}
+
+.dark-mode .dropdown-menu {
+	background-color: #1e1e1e; /* Dropdown background color */
+}
+
+.dark-mode .dropdown-item {
+	color: #ffffff; /* Dropdown item color */
+}
+
+.dark-mode .dropdown-item:hover {
+	background-color: #333333; /* Dropdown item hover color */
+}
+
+/* Other elements as necessary */
 
 .home-section {
-    border-radius: 8px;
-    padding: 15px;
-    margin-bottom: 20px;
+	border-radius: 8px;
+	padding: 15px;
+	margin-bottom: 20px;
 }
 
 .home-frontend-section {
-    display: flex;
-    justify-content: space-around;
+	display: flex;
+	justify-content: space-around;
 }
-
-

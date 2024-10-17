@@ -15,7 +15,11 @@ from django.contrib.auth.decorators import login_required
 
 
 def home(request):
-    return render(request, "job_me/home.html")
+    technologies = Technology.objects.all()
+    context = {
+        "technologies": technologies,
+    }
+    return render(request, "job_me/home.html", context)
 
 
 def categories(request):
@@ -79,15 +83,15 @@ def technology_detail(request, technology_id):
     return render(request, "job_me/technology_detail.html", context)
 
 
-def question_list(request, technology_id):
+def question_list(request):
 
-    technology = get_object_or_404(Technology, id=technology_id)
-    modules = technology.modules.all()
+    technologies = Technology.objects.all()
+    modules = Module.objects.filter(technology__in=technologies)
     topics = Topic.objects.filter(module__in=modules)
     questions = Question.objects.filter(topic__in=topics)
 
     context = {
-        "technology": technology,
+        "technologies": technologies,
         "questions": questions,
     }
     return render(request, "job_me/question_list.html", context)

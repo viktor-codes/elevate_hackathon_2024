@@ -9,7 +9,7 @@ urlpatterns = [
     path("", views.home, name="home"),
     path("about/", views.about, name="about"),
     path("categories/", views.category_list, name="categories"),
-    path("interview/", views.interview, name="interview"),
+    path("top-questions/", views.question_list, name="top_questions"),
     path(
         "technologies/<int:technology_id>/",
         views.technology_detail,

@@ -75,6 +75,7 @@
 }
 
 #tech-container {
+	height: 100vh;
 	background-image: url('../images/stack-bg1.jpg');
 	background-size: cover;
 	background-position: bottom center; /* Start from the bottom */
@@ -117,6 +118,7 @@
 	padding: 10px 20px;
 	font-size: 16px;
 	font-weight: bold;
+	text-decoration: none;
 	text-transform: uppercase;
 	border-radius: 5px;
 	transition: background-color 0.3s, color 0.3s;
